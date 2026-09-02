@@ -12,7 +12,7 @@ func TestGetAPIKey(t *testing.T) {
 		expectedErr   bool
 		expectedVal   string
 	}{
-		"Valid API Key":       {includeHeader: true, headerVal: "ApiKey 4bba243dc0d5cc18dd9b059a104bc4cf", expectedErr: false, expectedVal: "4bba243dc0d5cc18dd9b059a104bc4ab"},
+		"Valid API Key":       {includeHeader: true, headerVal: "ApiKey 4bba243dc0d5cc18dd9b059a104bc4cf", expectedErr: false, expectedVal: "4bba243dc0d5cc18dd9b059a104bc4cf"},
 		"No Auth Header":      {includeHeader: false, headerVal: "", expectedErr: true, expectedVal: ""},
 		"Invalid Auth Header": {includeHeader: true, headerVal: "ApiKey", expectedErr: true, expectedVal: ""},
 	}
